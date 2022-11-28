@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ポモドーロタイマー</title>
+  </head>
+  <body>
+    <div class="time">
+      <form name="e" action="" class="form">
+        <div class="setTimer">
+          <select id="study"></select>
+          <span class="koron">:</span>
+          <select id="rest"></select>
+        </div>
+        <select id="language">
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="PHP">PHP</option>
+          <option value="Laravel">Laravel</option>
+          <option value="SQL">SQL</option>
+          <option value="React">React</option>
+          <option value="WordPress">WordPress</option>
+          <option value="GitHub">GitHub</option>
+        </select>
+        <button
+          type="button"
+          onclick="display()"
+          onunload="clearTimeout(tid)"
+          class="start"
+        >
+          スタート
+        </button>
+      </form>
+      <form name="f" action="" class="form2">
+        <input type="text" name="days" size="25" class="timer" />
+        <input type="text" name="languages" class="language" />
+        <input type="hidden" class="timeHour" />
+        <button type="button" class="timerRecord">記録する</button>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
